@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+    
+    <h2><%= skill.name %></h2>
+    <h3>Level: <%= skill.level %></h3>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a><br>
+    <form 
+        action="/skills/<%= skill.id %>?_method=DELETE"
+        method="POST"
+        class="delete-form"
+    >
+        <button type="submit">X</button>
+    </form>
+<%- include('../partials/footer') %>
